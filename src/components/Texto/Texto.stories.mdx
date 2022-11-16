@@ -1,0 +1,28 @@
+import { 
+ Meta,
+ Canvas,
+ Story,
+ ArgsTable
+} from '@storybook/addon-docs';
+
+import Texto from './Texto';
+
+
+<Meta title ="Components/Texto" component={Texto} />
+
+# Texto
+
+Esse texto pode ser h1, h2, h3, h4 ou p.
+
+<ArgsTable of={Texto} />
+
+## Texto example
+
+<Canvas>
+  <Story
+    name="Texto Example"
+    args={{ children: 'Texto'}}
+  >
+    {(args) => <Texto {...args} />}
+  </Story>
+</Canvas>
